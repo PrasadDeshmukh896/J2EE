@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Account</title>
+   <link rel="stylesheet" href="./HomePage.css">
+    <link rel="icon" href="./images/ApnaBank.png">
+    <style>
+      body{
+        display: flex;
+        height: 100vh;
+        justify-content: center;
+        align-items: center;
+      }
+    </style>
+</head>
+<body>
+  <div class="container">
+    <form action="addlink" method="post">
+        <div class="main-user-info">
+           <div class="user-input-box">
+            <label for="username">Enter Name</label>
+            <input type="text" id="username" name="username" placeholder="Enter Name">
+           </div> 
+           <div class="user-input-box">
+            <label for="accnumber">Enter Account Number</label>
+            <input type="text" id="accnumber" name="accnumber" placeholder="Enter Account Number">
+           </div> 
+           <div class="user-input-box">
+            <label for="ibal">Enter Initial Balance</label>
+            <input type="text" id="ibalance" name="ibalance" placeholder="Enter Initial Balance">
+           </div> 
+           <div class="form-submit-btn">
+            <input type="submit" value="CreateAcc">
+           </div>
+        </div>
+    </form>
+ </div>
+</body>
+</html>

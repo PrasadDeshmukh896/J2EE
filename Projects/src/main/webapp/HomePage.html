@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ApnaBank</title>
+    <link rel="stylesheet" href="./HomePage.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+   <link rel="icon" href="./images/ApnaBank.png">
+</head>
+<body>
+      <header>
+        <div class="navbar">
+         <div class="logo"><a href="#">Apna Bank</a></div>
+         <ul class="links">
+            <li><a href="AddAccount.html">AddAccount</a></li>
+            <li><a href="displaylink">Display Accounts</a></li>
+         </ul>
+         <a href="#" class="action_btn">Login/SignUp</a>
+         <div class="toggle_btn">
+            <i class="fa-solid fa-bars"></i>
+         </div>
+        </div>
+        <div class="dropdown_menu">
+            <li><a href="AddAccount.html">AddAccount</a></li>
+            <li><a href="displaylink">Display Accounts</a></li>
+            <li><a href="#" class="action_btn">Login/SignUp</a></li>
+        </div>
+      </header>
+      <script>
+        const toggleBtn = document.querySelector('.toggle_btn')
+        const toggleBtnIcon = document.querySelector('.toggle_btn i')
+        const dropDownMenu = document.querySelector('.dropdown_menu')
+
+        toggleBtn.onclick = function(){
+            dropDownMenu.classList.toggle('open')
+            const isOpen = dropDownMenu.classList.contains('open')
+
+            toggleBtnIcon.classList = isOpen
+            ? 'fa-solid fa-xmark'
+            : 'fa-solid fa-bars'
+        }
+      </script><br>
+     <div class="container">
+        <form action="multilink" method="post">
+            <div class="main-user-info">
+               <div class="user-input-box">
+                <label for="account">Enter Account Number</label>
+                <input type="text" id="account" name="account" placeholder="Enter Account Number">
+               </div> 
+               <div class="user-input-box">
+                <label for="balance">Enter Balance</label>
+                <input type="text" id="balance" name="balance" placeholder="Enter Balance">
+               </div> 
+               <div class="form-submit-btn">
+               <input type="submit" value="Deposite" name="deposite">
+               </div>
+               <div class="form-submit-btn">
+                <input type="submit" value="Withdraw" name="withdraw">
+               </div>
+            </div>
+        </form>
+     </div>
+</body>
+</html>
